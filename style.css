@@ -31,3 +31,124 @@ Spacing and breakpoint choices -> starter values for team review.*/
   --page-padding: var(--space-sm);
   --section-padding: var(--space-lg);
 }
+
+/* BASE / MOBILE: applies at every width unless overridden below. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  overflow-wrap: break-word;
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--page-padding);
+}
+
+.section {
+  padding-block: var(--section-padding);
+}
+
+/* SHARED HEADER / NAV / FOOTER
+   Add the team's agreed shared rules here.
+   CSS-only burger menu still to be discussed and implemented. */
+
+/* CONTACT: layout only, no visual design yet. */
+.contact-layout,
+.contact-form,
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-layout {
+  gap: var(--space-lg);
+}
+
+.contact-form {
+  gap: var(--space-sm);
+}
+
+.form-field {
+  gap: var(--space-xs);
+}
+
+.contact-form,
+.contact-details {
+  min-width: 0;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  min-width: 0;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+/* TABLET: 768px and up (also applies on desktop).
+   CSS variables cannot be used in media-query conditions. */
+@media (min-width: 768px) {
+  :root {
+    --page-padding: var(--space-md);
+    --section-padding: var(--space-xl);
+    --font-size-hero: 2.5rem;
+    --font-size-heading: 2rem;
+    --font-size-quote: 2rem;
+  }
+}
+
+/* DESKTOP: 1200px and up; overrides tablet rules when needed. */
+@media (min-width: 1200px) {
+  :root {
+    --page-padding: var(--space-lg);
+    --font-size-hero: 3rem; /* 48px */
+    --font-size-heading: 2.25rem; /* 36px */
+    --font-size-quote: 2.25rem; /* 36px; use light italic later */
+  }
+
+  .contact-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .contact-form,
+  .contact-details {
+    flex: 1;
+  }
+}
