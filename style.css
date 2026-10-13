@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;800&display=swap");
+
+/* SHARED VARIABLES -
+Palett and desktop type sizes -> from the assignment brief.
+Spacing and breakpoint choices -> starter values for team review.*/
+
+:root {
+  --color-dark: #1f2937;
+  --color-light: #f9faf8;
+  --color-muted: #e5e7eb;
+  --color-accent: #3882f6;
+
+  --font-family: "Roboto", sans-serif;
+  --font-size-body: 1.125rem; /* 18px with the default root size */
+  --font-size-logo: 1.5rem; /* 24px */
+  --font-size-hero: 2rem; /* Mobile; desktop becomes 48px */
+  --font-size-heading: 1.75rem; /* Mobile; desktop becomes 36px */
+  --font-size-quote: 1.75rem; /* Mobile; desktop becomes 36px */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --line-height-body: 1.5;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --container-max-width: 75rem;
+  --page-padding: var(--space-sm);
+  --section-padding: var(--space-lg);
+}
