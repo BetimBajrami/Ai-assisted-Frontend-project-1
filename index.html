@@ -9,28 +9,35 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
+    <!-- Shared styles -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Home page styles only -->
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Header and navigation -->
     <header class="header">
+
         <div class="header-container">
 
             <a href="index.html" class="logo">
-                <!-- Company name here -->
+                Mayerfeld Consulting
             </a>
 
             <nav class="navbar" aria-label="Main navigation">
                 <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">&#9776;</label>
+
+                <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
+                    &#9776;
+                </label>
 
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
                     <li><a href="About.html">About</a></li>
                     <li><a href="Services.html">Services</a></li>
                     <li><a href="Contact.html">Contact</a></li>
@@ -39,14 +46,16 @@
 
         </div>
 
-        <!-- Hero Section -->
+        <!-- Hero section -->
         <section class="hero">
+
             <div class="hero-content">
                 <h1>This website is awesome</h1>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua.
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
                 </p>
 
                 <a href="Contact.html" class="button">Sign up</a>
@@ -55,13 +64,16 @@
             <div class="hero-placeholder">
                 <span>This is a placeholder for an image</span>
             </div>
+
         </section>
+
     </header>
 
     <main>
 
-        <!-- Info Section -->
+        <!-- Information section -->
         <section class="info">
+
             <h2>Some random information.</h2>
 
             <div class="info-cards">
@@ -87,22 +99,30 @@
                 </article>
 
             </div>
+
         </section>
 
-        <!-- Quote Section -->
+        <!-- Quote section -->
         <section class="quote-section">
+
             <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+
                 <cite>- Unknown</cite>
             </blockquote>
+
         </section>
 
-        <!-- Sign up section-->
+        <!-- Call-to-action section -->
         <section class="signup-section">
+
             <div class="signup-content">
+
                 <div>
                     <h2>Call to action! It's time!</h2>
+
                     <p>
                         Sign up for our product by clicking that button
                         right over there!
@@ -110,18 +130,19 @@
                 </div>
 
                 <a href="Contact.html" class="signup-button">Sign up</a>
+
             </div>
+
         </section>
 
     </main>
-
 
     <!-- Footer -->
     <footer class="footer">
 
         <nav class="footer-nav" aria-label="Footer navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="About.html">About</a></li>
                 <li><a href="Services.html">Services</a></li>
                 <li><a href="Contact.html">Contact</a></li>
