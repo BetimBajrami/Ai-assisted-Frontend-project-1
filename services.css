@@ -1,0 +1,71 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    
+
+}
+
+.services {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+
+
+}
+
+.service_card {
+    border: 1px solid black;
+    padding: 30px;
+    text-align: center;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.button_section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+ 
+    
+}
+
+.button_Contact_Us {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    padding: 20px 40px;
+    border: none;
+    background-color: #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button_Contact_Us:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+}

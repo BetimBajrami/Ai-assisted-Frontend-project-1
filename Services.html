@@ -1,45 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Services</title>
+    <link rel="stylesheet" href="services.css">
 </head>
+
 <body>
-     <nav>
-        <picture>
-            <source srcset="logo.webp" type="image/webp">
-            <img src="logo.png" alt="Logo" width="100" height="100">
-        </picture>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h1>About Us</h1>
-            <p>Welcome to our website! We are a team of passionate developers dedicated to creating amazing web experiences.</p>
-        <h2>Our Mission</h2>
-            <p>Our mission is to provide high-quality web solutions that help businesses grow and succeed in the digital world.</p>
-    </section>
+    <header>
 
-    <section>
-        <h1>Our Services</h1>
-            <p>We offer a wide range of services to meet your web development needs, including:</p>
+        <!-- Navigation Bar -->
+        
+        <nav class="navbar">
+            <picture>
+                <source srcset="logo.webp" type="image/webp">
+                <img src="logo.png" alt="Logo" width="100" height="100">
+            </picture>
             <ul>
-                <li>Custom Website Design</li>
-                <li>Responsive Web Development</li>
-                <li>E-commerce Solutions</li>
-                <li>SEO Optimization</li>
-                <li>Website Maintenance and Support</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
-    </section>
+        </nav>
 
+    </header>
 
-    <footer>
+    <main>
+        
+        <!-- Hero Section -->
+        
+        <section class="hero">
+            <h1>Services</h1>
+            <p>Welcome to our website! We are a team of passionate developers dedicated to creating amazing web
+                experiences.
+            </p>
+        </section>
+
+        <!-- Services Section -->
+       
+        <section class="services">
+            <div class="service_card">
+                <img src="web-development.jpg" alt="Web Development" width="200" height="150">
+                <h2>Web Development</h2>
+                <p>We offer top-notch web development services to bring your ideas to life.</p>
+            </div>
+            <div class="service_card">
+                <img src="ui-ux-design.jpg" alt="UI/UX Design" width="200" height="150">
+                <h2>UI/UX Design</h2>
+                <p>Our design team creates user-friendly interfaces that enhance user experience.</p>
+            </div>
+            <div class="service_card">
+                <img src="seo-optimization.jpg" alt="SEO Optimization" width="200" height="150">
+                <h2>SEO Optimization</h2>
+                <p>Improve your website's visibility on search engines with our SEO optimization services.</p>
+            </div>
+            <div class="service_card">
+                <img src="seo-optimization.jpg" alt="SEO Optimization" width="200" height="150">
+                <h2>SEO Optimization</h2>
+                <p>Improve your website's visibility on search engines with our SEO optimization services.</p>
+            </div>
+
+        </section>
+       
+        <!-- Call to Action Section -->
+       
+        <section class="button_section">
+            <button class="button_Contact_Us" onclick="window.location.href='Contact.html'">Contact Us</button>
+        </section>
+      
+
+    </main>
+
+    <!-- Footer Section -->
+   
+    <footer class="footer">
         <p>&copy; 2026 Our Company. All rights reserved.</p>
     </footer>
-    
+
+
+
 </body>
+
 </html>
