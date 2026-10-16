@@ -1,79 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta
-    name="description"
-    content="Get in touch with Our Company to discuss your next web project."
-  >
-  <title>Contact | Our Company</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Planning your next getaway? Contact our travel team with your destination ideas, booking questions, and travel wishes."
+    />
+    <title>Contact | Mayerfeld Consulting</title>
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="contact.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
 
-<body>
-  <!-- Use the same shared header on every page. -->
-  <header class="header contact-header">
-    <div class="header-container">
-      <a class="logo" href="index.html">Our Company</a>
+  <body id="page-top">
+    <a class="contact-skip-link" href="#main-content">Skip to content</a>
 
-      <nav class="navbar" aria-label="Main navigation">
-        <input
-          type="checkbox"
-          id="menu-toggle"
-          aria-label="Show navigation menu"
-          aria-controls="main-navigation"
-        >
+    <!-- Same navigation, order, and branding as the current home page. -->
+    <header class="header contact-header">
+      <div class="header-container">
+        <a class="logo" href="index.html">Mayerfeld Consulting</a>
 
-        <label class="menu-icon" for="menu-toggle">
-          <span aria-hidden="true">☰</span> Menu
-        </label>
+        <nav class="navbar" aria-label="Main navigation">
+          <input
+            type="checkbox"
+            id="menu-toggle"
+            aria-label="Show navigation menu"
+            aria-controls="main-navigation"
+          />
+          <label class="menu-icon" for="menu-toggle">
+            <span aria-hidden="true">&#9776;</span>
+            <span class="contact-visually-hidden">Menu</span>
+          </label>
 
-        <ul class="nav-links" id="main-navigation">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Services.html">Services</a></li>
-          <li><a href="About.html">About us</a></li>
-          <li>
-            <a href="Contact.html" aria-current="page">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+          <ul class="nav-links" id="main-navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <main id="main-content" class="contact-page">
-    <section class="section" aria-labelledby="contact-heading">
-      <div class="container">
-        <div class="contact-intro">
-          <p class="contact-eyebrow">Let's start a conversation</p>
+    <main id="main-content" class="contact-page" tabindex="-1">
+      <!-- Introduction and the supplied contact photo. -->
+      <section class="section contact-hero" aria-labelledby="contact-heading">
+        <div class="container contact-hero-layout">
+          <div class="contact-intro">
+            <p class="contact-eyebrow">LET'S TALK TRAVEL</p>
+            <h1 id="contact-heading">Your next adventure starts here.</h1>
+            <p>
+              A weekend escape, a dream destination, or something a little
+              different? Tell us what you have in mind. We're here to help you
+              take the next step.
+            </p>
+            <a class="contact-hero-link" href="#message-heading"
+              >Plan your trip <span aria-hidden="true">&darr;</span></a
+            >
+          </div>
 
-          <h1 id="contact-heading">Have a project in mind?</h1>
-
-          <p>
-            Tell us what you're working on, ask a question,
-            or explore how we could work together.
-          </p>
+          <figure class="contact-photo">
+            <img
+              src="Images/contact-image.jpg"
+              alt="Wooden blocks displaying email, envelope, and telephone symbols above the words Contact Us"
+              width="2048"
+              height="1202"
+              fetchpriority="high"
+              decoding="async"
+            />
+            <figcaption>
+              <a href="https://www.vecteezy.com/free-photos/contact-center"
+                >Contact Center Stock photos by Vecteezy</a
+              >
+            </figcaption>
+          </figure>
         </div>
+      </section>
 
-        <div class="contact-layout">
-          <!-- Message form -->
-          <section
-            class="contact-panel contact-form-panel"
-            aria-labelledby="message-heading"
-          >
-            <h2 id="message-heading">Send us a message</h2>
+      <section
+        class="section contact-message-section"
+        aria-labelledby="message-heading"
+      >
+        <a
+          href="#page-top"
+          class="contact-back-to-top"
+          aria-label="Back to top"
+        >
+          <span aria-hidden="true">&uarr;</span>
+        </a>
 
+        <div class="container contact-layout">
+          <div class="contact-panel contact-form-panel">
+            <p class="contact-eyebrow">WHERE WOULD YOU LIKE TO GO?</p>
+            <h2 id="message-heading" tabindex="-1">Send us a message</h2>
+            <p class="contact-panel-intro">
+              Share your travel plans or ask us a question. You don't need to
+              have every detail figured out.
+            </p>
             <p id="form-note" class="contact-note">
-              Required fields are labelled. This is a demonstration
-              form; sending is not enabled yet.
+              This is a course demo; messages cannot be sent. Required fields
+              are marked below.
             </p>
 
-            <!--
-              Add an agreed endpoint and method before
-              enabling submission.
-            -->
+            <!-- No backend is connected: keep submission disabled. -->
             <form
               class="contact-form"
               aria-labelledby="message-heading"
@@ -81,18 +117,15 @@
             >
               <div class="form-row">
                 <div class="form-field">
-                  <label for="contact-first-name">
-                    First name (required)
-                  </label>
+                  <label for="contact-first-name">First name (required)</label>
                   <input
                     type="text"
                     id="contact-first-name"
                     name="first-name"
                     autocomplete="given-name"
                     required
-                  >
+                  />
                 </div>
-
                 <div class="form-field">
                   <label for="contact-last-name">Last name</label>
                   <input
@@ -100,7 +133,7 @@
                     id="contact-last-name"
                     name="last-name"
                     autocomplete="family-name"
-                  >
+                  />
                 </div>
               </div>
 
@@ -113,9 +146,8 @@
                     name="email"
                     autocomplete="email"
                     required
-                  >
+                  />
                 </div>
-
                 <div class="form-field">
                   <label for="contact-phone">Phone (optional)</label>
                   <input
@@ -123,8 +155,18 @@
                     id="contact-phone"
                     name="phone"
                     autocomplete="tel"
-                  >
+                  />
                 </div>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-destination">Destination (optional)</label>
+                <input
+                  type="text"
+                  id="contact-destination"
+                  name="destination"
+                  placeholder="A place you've been dreaming of..."
+                />
               </div>
 
               <div class="form-field">
@@ -133,69 +175,83 @@
                   id="contact-message"
                   name="message"
                   rows="6"
+                  placeholder="Tell us about your travel ideas, dates, or questions."
                   required
                 ></textarea>
               </div>
 
-              <button class="contact-submit" type="submit" disabled>
+              <button
+                class="contact-submit"
+                type="submit"
+                disabled
+                aria-describedby="form-note"
+              >
                 Send message
               </button>
             </form>
-          </section>
+          </div>
 
-          <!-- Company contact information -->
-          <section
+          <aside
             class="contact-panel contact-details"
             aria-labelledby="details-heading"
           >
+            <p class="contact-eyebrow">LET'S CONNECT</p>
             <h2 id="details-heading">Get in touch</h2>
-
             <p>
-              Prefer to contact us directly?
-              Use the details below.
+              From your first idea to your next booking question, we're happy to
+              help.
             </p>
 
-            <!-- Replace these sample details before publishing. -->
+            <!-- Sample details only. Replace with agreed agency details. -->
             <address>
               <dl class="contact-methods">
                 <div class="contact-method">
                   <dt>Email</dt>
                   <dd>
-                    <a href="mailto:hello@example.com">
-                      hello@example.com
-                    </a>
+                    <a href="mailto:travel@example.com">travel@example.com</a>
                   </dd>
                 </div>
-
                 <div class="contact-method">
                   <dt>Phone</dt>
-                  <dd>[Add company phone number]</dd>
+                  <dd>Agency phone number coming soon</dd>
                 </div>
-
                 <div class="contact-method">
-                  <dt>Location</dt>
-                  <dd>[Add company address]</dd>
+                  <dt>Visit us</dt>
+                  <dd>Agency address coming soon</dd>
                 </div>
-
                 <div class="contact-method">
-                  <dt>Office hours</dt>
-                  <dd>[Add opening days and hours]</dd>
+                  <dt>Opening hours</dt>
+                  <dd>Office hours coming soon</dd>
                 </div>
               </dl>
             </address>
 
             <p class="contact-note">
-              Contact details are placeholders for this course project.
+              Sample contact details for this course project.
             </p>
-          </section>
+            <div class="contact-travel-note">
+              <h3>A little inspiration?</h3>
+              <p>Explore our services and start imagining your next getaway.</p>
+              <a href="Services.html"
+                >Explore our services <span aria-hidden="true">&rarr;</span></a
+              >
+            </div>
+          </aside>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <!-- Use the same shared footer on every page. -->
-  <footer class="footer">
-    <p>&copy; 2026 Our Company. All rights reserved.</p>
-  </footer>
-</body>
+    <!-- Same footer as the current home page; Contact is the active link. -->
+    <footer class="footer contact-footer">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Copyright &copy; 2026 Mayerfeld Consulting</p>
+    </footer>
+  </body>
 </html>
