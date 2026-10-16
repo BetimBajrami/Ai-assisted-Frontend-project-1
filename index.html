@@ -5,32 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mayerfeld Consulting</title>
+    <title>Travel the Skies</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
+    <!-- Shared styles -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Home page styles only -->
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Header and navigation -->
     <header class="header">
+
         <div class="header-container">
 
             <a href="index.html" class="logo">
-                <!-- Company name here -->
+                Travel the Skies
             </a>
 
             <nav class="navbar" aria-label="Main navigation">
                 <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">&#9776;</label>
+
+                <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
+                    &#9776;
+                </label>
 
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
                     <li><a href="About.html">About</a></li>
                     <li><a href="Services.html">Services</a></li>
                     <li><a href="Contact.html">Contact</a></li>
@@ -39,96 +46,114 @@
 
         </div>
 
-        <!-- Hero Section -->
+        <!-- Hero section -->
         <section class="hero">
-            <div class="hero-content">
-                <h1>This website is awesome</h1>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua.
+            <div class="hero-content">
+                <h1>Allow us to plan your next adventure!</h1>
+
+                <p>
+                    Explore breathtaking destinations with our expertly crafted travel packages.
                 </p>
 
                 <a href="Contact.html" class="button">Sign up</a>
             </div>
 
             <div class="hero-placeholder">
-                <span>This is a placeholder for an image</span>
+                <img src="Images/Landing_page_image1.jpg" alt="A beautiful landscape with mountains and a lake.">
             </div>
+
         </section>
+
     </header>
 
     <main>
 
-        <!-- Info Section -->
+        <!-- Information section -->
         <section class="info">
+
             <h2>Some random information.</h2>
 
             <div class="info-cards">
 
                 <article class="info-card">
-                    <div class="info-box"></div>
-                    <p>This is some subtext under an illustration or image</p>
+                    <div class="info-box">
+                        <img src="Images/Landing_page_image2.jpg" alt="A beautiful forest landscape.">
+                    </div>
+                    <p>Visit beautiful forests.</p>
                 </article>
 
                 <article class="info-card">
-                    <div class="info-box"></div>
-                    <p>This is some subtext under an illustration or image</p>
+                    <div class="info-box">
+                        <img src="Images/Landing_page_image3.jpg" alt="A Waterfall.">
+                    </div>
+                    <p>Explore stunning waterfalls.</p>
                 </article>
 
                 <article class="info-card">
-                    <div class="info-box"></div>
-                    <p>This is some subtext under an illustration or image</p>
+                    <div class="info-box">
+                        <img src="Images/Landing_page_image4.jpg" alt="A beach view.">
+                    </div>
+                    <p>Relax on beautiful beaches.</p>
                 </article>
 
                 <article class="info-card">
-                    <div class="info-box"></div>
-                    <p>This is some subtext under an illustration or image</p>
+                    <div class="info-box">
+                        <img src="Images/Landing_page_image5.jpg" alt="Blue Skies.">
+                    </div>
+                    <p>Enjoy the beauty of blue skies.</p>
                 </article>
 
             </div>
+
         </section>
 
-        <!-- Quote Section -->
+        <!-- Quote section -->
         <section class="quote-section">
+
             <blockquote>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
-                <cite>- Unknown</cite>
+                Nature does not hurry, yet everything is accomplished.
+
+                <cite>- Lao Tzu</cite>
             </blockquote>
+
         </section>
 
-        <!-- Sign up section-->
+        <!-- Call-to-action section -->
         <section class="signup-section">
+
             <div class="signup-content">
+
                 <div>
                     <h2>Call to action! It's time!</h2>
+
                     <p>
-                        Sign up for our product by clicking that button
+                        Sign up for our trips by clicking that button
                         right over there!
                     </p>
                 </div>
 
                 <a href="Contact.html" class="signup-button">Sign up</a>
+
             </div>
+
         </section>
 
     </main>
-
 
     <!-- Footer -->
     <footer class="footer">
 
         <nav class="footer-nav" aria-label="Footer navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="About.html">About</a></li>
                 <li><a href="Services.html">Services</a></li>
                 <li><a href="Contact.html">Contact</a></li>
             </ul>
         </nav>
 
-        <p>Copyright &copy; 2026 Mayerfeld Consulting</p>
+        <p>Copyright &copy; 2026 Tahlia, Aspa & Betim</p>
 
     </footer>
 
