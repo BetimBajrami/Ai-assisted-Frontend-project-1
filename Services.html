@@ -1,45 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Services</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-     <nav>
-        <picture>
-            <source srcset="logo.webp" type="image/webp">
-            <img src="logo.png" alt="Logo" width="100" height="100">
-        </picture>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h1>About Us</h1>
-            <p>Welcome to our website! We are a team of passionate developers dedicated to creating amazing web experiences.</p>
-        <h2>Our Mission</h2>
-            <p>Our mission is to provide high-quality web solutions that help businesses grow and succeed in the digital world.</p>
-    </section>
+    <header>
 
-    <section>
-        <h1>Our Services</h1>
-            <p>We offer a wide range of services to meet your web development needs, including:</p>
-            <ul>
-                <li>Custom Website Design</li>
-                <li>Responsive Web Development</li>
-                <li>E-commerce Solutions</li>
-                <li>SEO Optimization</li>
-                <li>Website Maintenance and Support</li>
+        <!-- Navigation Bar -->
+
+        <nav class="navbar" aria-label="Main navigation">
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
+                &#9776;
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
-    </section>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+
+        <section class="hero">
+            <h1>Services</h1>
+            <p>Welcome to our website! We are a team of passionate developers dedicated to creating amazing web
+                experiences.
+            </p>
+        </section>
+
+        <!-- Services Section -->
+
+        <section class="services">
+            <div class="service_card">
+                <img src="images/Services_CityTravel_image.jfif" alt="City Travel">
+                <h2>City</h2>
+                <p>Explore vibrant cities, discover iconic landmarks, and experience new cultures. Your next urban
+                    adventure awaits!</p>
+            </div>
+            <div class="service_card">
+                <img src="images/Services_MountainTravel_image.jfif" alt="Mountain Travel">
+                <h2>Mountain</h2>
+                <p>Escape into nature, enjoy breathtaking mountain views, and explore beautiful hiking trails. Adventure
+                    starts here!</p>
+            </div>
+            <div class="service_card">
+                <img src="images/Services_OceanTravel_image.jfif" alt="Ocean Travel">
+                <h2>Ocean</h2>
+                <p>Relax on stunning beaches, swim in crystal-clear waters, and discover tropical destinations. Your
+                    perfect getaway awaits!</p>
+            </div>
+            <div class="service_card">
+                <img src="images/Services_WinterTravel_image.jfif" alt="Winter Travel">
+                <h2>Winter</h2>
+                <p>Experience snowy landscapes, cozy mountain cabins, and exciting winter activities. Make unforgettable
+                    winter memories!</p>
+            </div>
+
+        </section>
+
+        <!-- Call to Action Section -->
+
+        <section class="button_section">
+            <button class="button_Contact_Us" onclick="window.location.href='Contact.html'">Contact Us</button>
+        </section>
 
 
-    <footer>
-        <p>&copy; 2026 Our Company. All rights reserved.</p>
+    </main>
+
+    <!-- Footer Section -->
+
+    <footer class="footer">
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <p>Copyright &copy; 2026 Tahlia, Aspa & Betim</p>
+
     </footer>
-    
+
+
+
+
 </body>
+
 </html>

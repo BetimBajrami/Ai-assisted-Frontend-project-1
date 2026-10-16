@@ -1,173 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;800&display=swap");
-
-/* SHARED VARIABLES -
-Palette and desktop type sizes -> from the assignment brief.
-Spacing and breakpoint choices -> starter values for team review.*/
-
-:root {
-  --color-dark: #1f2937;
-  --color-light: #f9faf8;
-  --color-muted: #e5e7eb;
-  --color-accent: #3882f6;
-
-  --font-family: "Roboto", sans-serif;
-  --font-size-body: 1.125rem; /* 18px with the default root size */
-  --font-size-logo: 1.5rem; /* 24px */
-  --font-size-hero: 2rem; /* Mobile; desktop becomes 48px */
-  --font-size-heading: 1.75rem; /* Mobile; desktop becomes 36px */
-  --font-size-quote: 1.75rem; /* Mobile; desktop becomes 36px */
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
-  --font-weight-extra-bold: 800;
-  --line-height-body: 1.5;
-
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  --container-max-width: 75rem;
-  --page-padding: var(--space-sm);
-  --section-padding: var(--space-lg);
-}
-
-/* BASE / MOBILE: applies at every width unless overridden below. */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-family);
-  font-size: var(--font-size-body);
-  line-height: var(--line-height-body);
-  color: var(--color-dark);
-  overflow-wrap: break-word;
-}
-
-main {
-  flex: 1;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+/* ========================================
+   SHARED VARIABLES
 }
 
 input,
 textarea,
 button,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 .container {
-  width: 100%;
-  max-width: var(--container-max-width);
-  margin-inline: auto;
-  padding-inline: var(--page-padding);
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+    padding-inline: var(--page-padding);
 }
 
 .section {
-  padding-block: var(--section-padding);
+    padding-block: var(--section-padding);
 }
 
-/* SHARED HEADER / NAV / FOOTER
-   Add the team's agreed shared rules here.
-   CSS-only burger menu still to be discussed and implemented. */
 
-/* CONTACT: layout only, no visual design yet. */
-.contact-layout,
-.contact-form,
-.form-field {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-layout {
-  gap: var(--space-lg);
-}
-
-.contact-form {
-  gap: var(--space-sm);
-}
-
-.form-field {
-  gap: var(--space-xs);
-}
-
-.contact-form,
-.contact-details {
-  min-width: 0;
-}
-
-.form-field input,
-.form-field textarea {
-  width: 100%;
-  min-width: 0;
-}
-
-.form-field textarea {
-  resize: vertical;
-}
-
-.contact-form button {
-  align-self: flex-start;
-}
-
-/* TABLET: 768px and up (also applies on desktop).
-   CSS variables cannot be used in media-query conditions. */
-@media (min-width: 768px) {
-  :root {
-    --page-padding: var(--space-md);
-    --section-padding: var(--space-xl);
-    --font-size-hero: 2.5rem;
-    --font-size-heading: 2rem;
-    --font-size-quote: 2rem;
-  }
-}
-
-/* DESKTOP: 1200px and up; overrides tablet rules when needed. */
-@media (min-width: 1200px) {
-  :root {
-    --page-padding: var(--space-lg);
-    --font-size-hero: 3rem; /* 48px */
-    --font-size-heading: 2.25rem; /* 36px */
-    --font-size-quote: 2.25rem; /* 36px; use light italic later */
-  }
-
-  .contact-layout {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .contact-form,
-  .contact-details {
-    flex: 1;
-  }
-}
-
-/* GENERAL STYLES */
-
-a {
-    text-decoration: none;
-}
-
-p {
-    margin-top: 0;
-}
-
-/* HEADER */
-.header {
-    background-color: #1F2937;
-    color: #F9FAF8;
+/* ========================================
+   SHARED HEADER
     padding: 0 12%;
 }
 
@@ -176,222 +31,117 @@ p {
     justify-content: space-between;
     align-items: center;
     min-height: 65px;
-    gap: 24px;
+    gap: var(--space-md);
 }
 
 .logo {
-    color: #F9FAF8;
-    font-size: 24px;
-    font-weight: 700;
+    color: var(--color-light);
+    font-size: var(--font-size-logo);
+    font-weight: var(--font-weight-bold);
     white-space: nowrap;
 }
 
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+.logo:hover {
+    color: var(--color-muted);
+}
+
+
+/* ========================================
+   SHARED NAVIGATION
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .nav-links a {
-    color: #E5E7EB;
-    font-size: 18px;
+    display: block;
+    color: var(--color-muted);
+    font-size: var(--font-size-body);
 }
 
-.nav-links a:hover {
-    color: #FFFFFF;
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+    color: var(--color-light);
 }
 
-/* MOBILE MENU */
+
+/* ========================================
+   MOBILE NAVIGATION
 #menu-toggle,
 .menu-icon {
     display: none;
 }
 
-/* HERO */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 45px;
-    padding: 65px 0 80px;
+@media (max-width: 768px) {
+
+    .header {
+        padding: 0 6%;
+    }
+
+    .header-container {
+        flex-wrap: wrap;
+        padding: 18px 0;
+    }
+
+    .logo {
+        font-size: 1.375rem;
+        white-space: normal;
+    }
+
+    .navbar {
+        position: relative;
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+
+    #menu-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        color: var(--color-light);
+        font-size: 1.75rem;
+        cursor: pointer;
+    }
+
+    #menu-toggle:focus-visible+.menu-icon {
+        outline: 2px solid var(--color-light);
+        outline-offset: 4px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 10;
+
+        width: 200px;
+        padding: var(--space-xs) 0;
+        background-color: var(--color-dark);
+    }
+
+    #menu-toggle:checked~.nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px var(--space-sm);
+        text-align: right;
+    }
 }
 
-.hero-content {
-    flex: 1;
-}
 
-.hero-content h1 {
-    color: #F9FAF8;
-    font-size: 48px;
-    font-weight: 900;
-    line-height: 1.1;
-    margin: 0 0 10px;
-}
-
-.hero-content p {
-    color: #E5E7EB;
-    font-size: 18px;
-    line-height: 1.4;
-    margin-bottom: 16px;
-}
-
-.button {
-    display: inline-block;
-    background-color: #3882F6;
-    color: #FFFFFF;
-    padding: 7px 28px;
-    border-radius: 7px;
-    font-weight: 700;
-}
-
-.button:hover {
-    background-color: #2563EB;
-}
-
-/* HERO IMAGE PLACEHOLDER */
-.hero-placeholder {
-    flex: 1;
-    min-height: 210px;
-    background-color: #6B7280;
-    color: #E5E7EB;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.hero-placeholder span {
-    font-size: 14px;
-}
-
-/* INFORMATION SECTION */
-.info {
-    padding: 35px 20px 65px;
-    text-align: center;
-}
-
-.info h2 {
-    font-size: 36px;
-    font-weight: 900;
-    margin: 0 0 35px;
-}
-
-/* Arrange the four cards horizontally */
-.info-cards {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 28px;
-    flex-wrap: wrap;
-}
-
-.info-card {
-    width: 130px;
-    flex-shrink: 0;
-    text-align: center;
-}
-
-.info-box {
-    width: 120px;
-    height: 120px;
-    border: 3px solid #3882F6;
-    border-radius: 12px;
-    margin: 0 auto 8px;
-}
-
-.info-card p {
-    color: #4B5563;
-    font-size: 14px;
-    line-height: 1.2;
-}
-
-/* QUOTE SECTION */
-.quote-section {
-    background-color: #E5E7EB;
-    padding: 75px 20px;
-}
-
-.quote-section blockquote {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 36px;
-    font-weight: 300;
-    font-style: italic;
-    line-height: 1.2;
-}
-
-.quote-section cite {
-    display: block;
-    text-align: right;
-    font-size: 16px;
-    font-weight: 700;
-    font-style: normal;
-    margin-top: 12px;
-}
-
-/* CALL TO ACTION */
-.signup-section {
-    max-width: 1000px;
-    margin: 65px auto;
-    padding: 0 25px;
-}
-
-.signup-content {
-    background-color: #3882F6;
-    color: #FFFFFF;
-    padding: 35px 60px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
-}
-
-.signup-content h2 {
-    font-size: 24px;
-    margin: 0 0 5px;
-}
-
-.signup-content p {
-    color: #E5E7EB;
-    margin-bottom: 0;
-}
-
-.signup-button {
-    display: inline-block;
-    color: #FFFFFF;
-    border: 2px solid #FFFFFF;
-    border-radius: 7px;
-    padding: 6px 25px;
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-.signup-button:hover {
-    background-color: #2563EB;
-}
-
-/* FOOTER */
-.footer {
-    background-color: #1F2937;
-    color: #E5E7EB;
-    padding: 25px 15px;
-    text-align: center;
-}
-
-.footer p {
-    margin: 0;
-    font-size: 14px;
-}
-
-/* FOOTER */
-.footer {
-    background-color: #1F2937;
-    color: #E5E7EB;
+/* ========================================
+   SHARED CONTACT FORM LAYOUT
     padding: 22px 15px;
     text-align: center;
 }
@@ -408,14 +158,13 @@ p {
 }
 
 .footer-nav a {
-    color: #E5E7EB;
-    text-decoration: none;
-    font-size: 16px;
+    color: var(--color-muted);
+    font-size: 1rem;
 }
 
-.footer-nav a:hover {
-    color: #FFFFFF;
-    text-decoration: underline;
+.footer-nav a:hover,
+.footer-nav a[aria-current="page"] {
+    color: var(--color-light);
 }
 
 .footer p {
@@ -423,140 +172,6 @@ p {
     font-size: 14px;
 }
 
-/* TABLETS */
-@media (max-width: 768px) {
-    .header {
-        padding: 0 6%;
-    }
 
-    .header-container {
-        flex-wrap: wrap;
-        padding: 18px 0;
-    }
-
-    .logo {
-        font-size: 22px;
-    }
-
-    .navbar {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        margin-left: auto;
-    }
-
-    .menu-icon {
-        display: block;
-        color: #F9FAF8;
-        font-size: 28px;
-        cursor: pointer;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        gap: 0;
-        padding-top: 12px;
-    }
-
-    #menu-toggle:checked~.nav-links {
-        display: flex;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 10px;
-        text-align: right;
-    }
-
-    .hero {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 30px;
-        padding: 45px 0 55px;
-    }
-
-    .hero-content h1 {
-        font-size: 40px;
-    }
-
-    .hero-placeholder {
-        min-height: 220px;
-        width: 100%;
-    }
-
-    .info h2 {
-        font-size: 30px;
-    }
-
-    .quote-section blockquote {
-        font-size: 30px;
-    }
-
-    .signup-content {
-        padding: 30px;
-    }
-}
-
-/* SMALL MOBILE SCREENS */
-@media (max-width: 480px) {
-    .header {
-        padding: 0 20px;
-    }
-
-    .logo {
-        font-size: 20px;
-        white-space: normal;
-    }
-
-    .hero-content h1 {
-        font-size: 36px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-
-    .info {
-        padding: 35px 15px 45px;
-    }
-
-    .info-cards {
-        gap: 20px;
-    }
-
-    .info-card {
-        width: 125px;
-    }
-
-    .info-box {
-        width: 110px;
-        height: 110px;
-    }
-
-    .quote-section {
-        padding: 45px 25px;
-    }
-
-    .quote-section blockquote {
-        font-size: 26px;
-    }
-
-    .signup-section {
-        margin: 40px auto;
-        padding: 0 20px;
-    }
-
-    .signup-content {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 25px;
-    }
-
-    .footer {
-        padding: 22px 15px;
-    }
-}
-
+/* ========================================
+   SHARED RESPONSIVE VARIABLES
