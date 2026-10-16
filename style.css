@@ -1,0 +1,361 @@
+/* ========================================
+   SHARED VARIABLES
+======================================== */
+
+:root {
+    /* Colours */
+    --color-dark: #1f2937;
+    --color-light: #f9faf8;
+    --color-muted: #e5e7eb;
+    --color-accent: #3882f6;
+    --color-accent-hover: #2563eb;
+    --color-placeholder: #6b7280;
+    --color-text-muted: #4b5563;
+
+    /* Typography */
+    --font-family: "Roboto", sans-serif;
+    --font-size-body: 1.125rem;
+    --font-size-logo: 1.5rem;
+    --font-size-hero: 2rem;
+    --font-size-heading: 1.75rem;
+    --font-size-quote: 1.75rem;
+
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+
+    --line-height-body: 1.5;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    --container-max-width: 75rem;
+    --page-padding: var(--space-sm);
+    --section-padding: var(--space-lg);
+}
+
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    color: var(--color-dark);
+
+    overflow-wrap: break-word;
+}
+
+main {
+    flex: 1;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-top: 0;
+}
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+    padding-inline: var(--page-padding);
+}
+
+.section {
+    padding-block: var(--section-padding);
+}
+
+
+/* ========================================
+   SHARED HEADER
+======================================== */
+
+.header {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 0 12%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 65px;
+    gap: var(--space-md);
+}
+
+.logo {
+    color: var(--color-light);
+    font-size: var(--font-size-logo);
+    font-weight: var(--font-weight-bold);
+    white-space: nowrap;
+}
+
+.logo:hover {
+    color: var(--color-muted);
+}
+
+
+/* ========================================
+   SHARED NAVIGATION
+======================================== */
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: var(--color-dark);
+    padding: 20px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    display: block;
+    color: var(--color-muted);
+    font-size: var(--font-size-body);
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+    color: var(--color-light);
+}
+
+
+/* ========================================
+   MOBILE NAVIGATION
+======================================== */
+
+#menu-toggle,
+.menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 0 6%;
+    }
+
+    .header-container {
+        flex-wrap: wrap;
+        padding: 18px 0;
+    }
+
+    .logo {
+        font-size: 1.375rem;
+        white-space: normal;
+    }
+
+    .navbar {
+        position: relative;
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+
+    #menu-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+
+    .menu-icon {
+        display: block;
+        color: var(--color-light);
+        font-size: 1.75rem;
+        cursor: pointer;
+    }
+
+    #menu-toggle:focus-visible+.menu-icon {
+        outline: 2px solid var(--color-light);
+        outline-offset: 4px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 10;
+
+        width: 200px;
+        padding: var(--space-xs) 0;
+        background-color: var(--color-dark);
+    }
+
+    #menu-toggle:checked~.nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px var(--space-sm);
+        text-align: right;
+    }
+}
+
+
+/* ========================================
+   SHARED CONTACT FORM LAYOUT
+======================================== */
+
+.contact-layout,
+.contact-form,
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-layout {
+    gap: var(--space-lg);
+}
+
+.contact-form {
+    gap: var(--space-sm);
+}
+
+.form-field {
+    gap: var(--space-xs);
+}
+
+.contact-form,
+.contact-details {
+    min-width: 0;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    min-width: 0;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    align-self: flex-start;
+}
+
+
+/* ========================================
+   SHARED FOOTER
+======================================== */
+
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-muted);
+    padding: 22px 15px;
+    text-align: center;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+}
+
+.footer-nav a {
+    color: var(--color-muted);
+    font-size: 1rem;
+}
+
+.footer-nav a:hover,
+.footer-nav a[aria-current="page"] {
+    color: var(--color-light);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* ========================================
+   SHARED RESPONSIVE VARIABLES
+======================================== */
+
+@media (min-width: 768px) {
+    :root {
+        --page-padding: var(--space-md);
+        --section-padding: var(--space-xl);
+        --font-size-hero: 2.5rem;
+        --font-size-heading: 2rem;
+        --font-size-quote: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        --page-padding: var(--space-lg);
+        --font-size-hero: 3rem;
+        --font-size-heading: 2.25rem;
+        --font-size-quote: 2.25rem;
+    }
+
+    .contact-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .contact-form,
+    .contact-details {
+        flex: 1;
+    }
+}
