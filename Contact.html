@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Get in touch with Our Company to discuss your next web project."
+  >
+  <title>Contact | Our Company</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+  <!-- Use the same shared header on every page. -->
+  <header class="header contact-header">
+    <div class="header-container">
+      <a class="logo" href="index.html">Our Company</a>
+
+      <nav class="navbar" aria-label="Main navigation">
+        <input
+          type="checkbox"
+          id="menu-toggle"
+          aria-label="Show navigation menu"
+          aria-controls="main-navigation"
+        >
+
+        <label class="menu-icon" for="menu-toggle">
+          <span aria-hidden="true">☰</span> Menu
+        </label>
+
+        <ul class="nav-links" id="main-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="About.html">About us</a></li>
+          <li>
+            <a href="Contact.html" aria-current="page">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="contact-page">
+    <section class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-intro">
+          <p class="contact-eyebrow">Let's start a conversation</p>
+
+          <h1 id="contact-heading">Have a project in mind?</h1>
+
+          <p>
+            Tell us what you're working on, ask a question,
+            or explore how we could work together.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Message form -->
+          <section
+            class="contact-panel contact-form-panel"
+            aria-labelledby="message-heading"
+          >
+            <h2 id="message-heading">Send us a message</h2>
+
+            <p id="form-note" class="contact-note">
+              Required fields are labelled. This is a demonstration
+              form; sending is not enabled yet.
+            </p>
+
+            <!--
+              Add an agreed endpoint and method before
+              enabling submission.
+            -->
+            <form
+              class="contact-form"
+              aria-labelledby="message-heading"
+              aria-describedby="form-note"
+            >
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="contact-first-name">
+                    First name (required)
+                  </label>
+                  <input
+                    type="text"
+                    id="contact-first-name"
+                    name="first-name"
+                    autocomplete="given-name"
+                    required
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="contact-last-name">Last name</label>
+                  <input
+                    type="text"
+                    id="contact-last-name"
+                    name="last-name"
+                    autocomplete="family-name"
+                  >
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="contact-email">Email (required)</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="contact-phone">Phone (optional)</label>
+                  <input
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    autocomplete="tel"
+                  >
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-message">Message (required)</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+
+              <button class="contact-submit" type="submit" disabled>
+                Send message
+              </button>
+            </form>
+          </section>
+
+          <!-- Company contact information -->
+          <section
+            class="contact-panel contact-details"
+            aria-labelledby="details-heading"
+          >
+            <h2 id="details-heading">Get in touch</h2>
+
+            <p>
+              Prefer to contact us directly?
+              Use the details below.
+            </p>
+
+            <!-- Replace these sample details before publishing. -->
+            <address>
+              <dl class="contact-methods">
+                <div class="contact-method">
+                  <dt>Email</dt>
+                  <dd>
+                    <a href="mailto:hello@example.com">
+                      hello@example.com
+                    </a>
+                  </dd>
+                </div>
+
+                <div class="contact-method">
+                  <dt>Phone</dt>
+                  <dd>[Add company phone number]</dd>
+                </div>
+
+                <div class="contact-method">
+                  <dt>Location</dt>
+                  <dd>[Add company address]</dd>
+                </div>
+
+                <div class="contact-method">
+                  <dt>Office hours</dt>
+                  <dd>[Add opening days and hours]</dd>
+                </div>
+              </dl>
+            </address>
+
+            <p class="contact-note">
+              Contact details are placeholders for this course project.
+            </p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Use the same shared footer on every page. -->
+  <footer class="footer">
+    <p>&copy; 2026 Our Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>
