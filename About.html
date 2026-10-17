@@ -1,158 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about our team and our approach to creating thoughtful web experiences.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn about our team and our approach to creating thoughtful web experiences."
+    />
     <title>About Us | Travel the Skies</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
+      <div class="header-container">
+        <a href="index.html" class="logo"> Travel the Skies </a>
 
-        <div class="header-container">
+        <nav class="navbar" aria-label="Main navigation">
+          <input type="checkbox" id="menu-toggle" />
 
-            <a href="index.html" class="logo">
-                Travel the Skies
-            </a>
+          <label
+            for="menu-toggle"
+            class="menu-icon"
+            aria-label="Toggle navigation"
+          >
+            &#9776;
+          </label>
 
-            <nav class="navbar" aria-label="Main navigation">
-                <input type="checkbox" id="menu-toggle">
-
-                <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
-                    &#9776;
-                </label>
-
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="About.html" aria-current="page">About</a></li>
-                    <li><a href="Services.html">Services</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-        </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html" aria-current="page">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="about-page">
-        <!-- Introduction: heading beside the text on wide screens. -->
-        <section class="about-intro" aria-labelledby="about-heading">
-            <h1 id="about-heading">About Us</h1>
+      <!-- Introduction: heading beside the text on wide screens. -->
+      <section class="about-intro" aria-labelledby="about-heading">
+        <h1 id="about-heading">About Us</h1>
 
-            <div class="about-intro-content">
-                <p class="about-intro-lead">
-                   Who We Are & What Drives Us
-                </p>
+        <div class="about-intro-content">
+          <p class="about-intro-lead">Who We Are & What Drives Us</p>
 
-                <!-- Text columns stack on mobile. -->
-                <div class="about-intro-columns">
-                    <div class="about-intro-column">
-                        <p>
-                            At our travel agency, we believe that every journey is an opportunity to discover something extraordinary. 
-                            Traveling is more than just visiting new destinations — it's about exploring cultures, 
-                            meeting new people, and creating unforgettable memories that last a lifetime.
-                        </p>
+          <!-- Text columns stack on mobile. -->
+          <div class="about-intro-columns">
+            <div class="about-intro-column">
+              <p>
+                At our travel agency, we believe that every journey is an
+                opportunity to discover something extraordinary. Traveling is
+                more than just visiting new destinations — it's about exploring
+                cultures, meeting new people, and creating unforgettable
+                memories that last a lifetime.
+              </p>
 
-                        <p>
-                          Our mission is to make travel simple, enjoyable, and accessible to everyone. 
-                          Whether you're looking for a peaceful beach getaway, an exciting city adventure, or an unforgettable journey across the world, 
-                          we are here to help you find the perfect experience.
-                        </p>
-                    </div>
-
-                    <div class="about-intro-column">
-                        <p>
-                            We are passionate about providing exceptional 
-                            service and helping travelers explore the world with confidence. 
-                            From carefully selected destinations to personalized travel experiences,
-                             we focus on making every trip comfortable, exciting, and stress-free.
-                        </p>
-
-                        <p>
-                            We believe that the best adventures are the ones that leave lasting impressions.
-                             That's why we continuously explore new destinations, discover hidden gems,
-                              and seek unique experiences to share with our travelers. 
-                              Whether it's your first journey or your next big adventure, we're here to inspire you to explore more, dream bigger, 
-                              and experience everything the world has to offer.
-
-                        </p>
-                    </div>
-                </div>
+              <p>
+                Our mission is to make travel simple, enjoyable, and accessible
+                to everyone. Whether you're looking for a peaceful beach
+                getaway, an exciting city adventure, or an unforgettable journey
+                across the world, we are here to help you find the perfect
+                experience.
+              </p>
             </div>
-        </section>
 
-        <!-- Wide image between the introduction and biography. -->
-        <div class="about-banner">
-            <img src="images/AboutUS_banner_img.jpg" alt="Design materials and project plans arranged on a worktable">
+            <div class="about-intro-column">
+              <p>
+                We are passionate about providing exceptional service and
+                helping travelers explore the world with confidence. From
+                carefully selected destinations to personalized travel
+                experiences, we focus on making every trip comfortable,
+                exciting, and stress-free.
+              </p>
+
+              <p>
+                We believe that the best adventures are the ones that leave
+                lasting impressions. That's why we continuously explore new
+                destinations, discover hidden gems, and seek unique experiences
+                to share with our travelers. Whether it's your first journey or
+                your next big adventure, we're here to inspire you to explore
+                more, dream bigger, and experience everything the world has to
+                offer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wide image between the introduction and biography. -->
+      <div class="about-banner">
+        <img
+          src="images/AboutUS_banner_img.jpg"
+          alt="Design materials and project plans arranged on a worktable"
+        />
+      </div>
+
+      <a href="#page-top" class="back-to-top" aria-label="Back to top">
+        <span aria-hidden="true">&uarr;</span>
+      </a>
+
+      <!-- Portrait and biography stack on mobile. -->
+
+      <section class="about-founder" aria-labelledby="founder-heading">
+        <div class="about-founder-image">
+          <img
+            src="images/ABoutUS_founder_img.jfif"
+            alt="Portrait of Alexandra Bennett"
+            loading="lazy"
+          />
         </div>
 
-        <!-- Portrait and biography stack on mobile. -->
+        <div class="about-founder-bio">
+          <h2 id="founder-heading">Meet Our Founder</h2>
 
+          <p>
+            Alexandra Bennett founded Our Company with a passion for bringing
+            creative ideas to life through design and technology.
+          </p>
 
-        <section class="about-founder" aria-labelledby="founder-heading">
+          <p>
+            Their approach begins with understanding people: their goals, their
+            challenges, and the experiences they want to create for their
+            audiences.
+          </p>
 
-            <div class="about-founder-image">
-                <img src="images/ABoutUS_founder_img.jfif" alt="Portrait of Alexandra Bennett" loading="lazy">
-            </div>
+          <p>
+            Working alongside our team, they help shape projects from the first
+            concept through to development, feedback, and refinement.
+          </p>
 
-            <div class="about-founder-bio">
-                <h2 id="founder-heading">Meet Our Founder</h2>
+          <p>
+            Collaboration and curiosity guide our work. We value open
+            communication, thoughtful decisions, and opportunities to learn from
+            each project.
+          </p>
 
-                <p>
-                    Alexandra Bennett founded Our Company with a
-                    passion for bringing creative ideas to life
-                    through design and technology.
-                </p>
-
-                <p>
-                    Their approach begins with understanding people:
-                    their goals, their challenges, and the experiences
-                    they want to create for their audiences.
-                </p>
-
-                <p>
-                    Working alongside our team, they help shape
-                    projects from the first concept through to
-                    development, feedback, and refinement.
-                </p>
-
-                <p>
-                    Collaboration and curiosity guide our work.
-                    We value open communication, thoughtful decisions,
-                    and opportunities to learn from each project.
-                </p>
-
-                <p>
-                    Together, we aim to build digital experiences
-                    that feel personal, purposeful, and welcoming.
-                </p>
-            </div>
-        </section>
+          <p>
+            Together, we aim to build digital experiences that feel personal,
+            purposeful, and welcoming.
+          </p>
+        </div>
+      </section>
     </main>
-
 
     <!-- Shared site footer goes here. -->
     <footer class="footer">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html" aria-current="page">About</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-        <nav class="footer-nav" aria-label="Footer navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html" aria-current="page">About</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
-        <p>Copyright &copy; 2026 Tahlia, Aspa & Betim</p>
-
+      <p>Copyright &copy; 2026 Tahlia, Aspa & Betim</p>
     </footer>
-</body>
-
+  </body>
 </html>
