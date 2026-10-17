@@ -127,19 +127,32 @@
     margin: 0;
 }
 
+
 @media (max-width: 480px) {
     .info-cards {
-        gap: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     .info-card {
-        flex: 1 1 125px;
+        flex: 0 1 125px;
+        width: 125px;
+    }
+
+    .info-card p {
+        font-size: 12px;
+        line-height: 1.4;
     }
 
     .info-card img {
+        width: 100%;
         height: 110px;
+        object-fit: cover;
     }
 }
+
 
 /* ========================================
    HOME PAGE: QUOTE SECTION
