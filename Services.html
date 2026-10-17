@@ -1,115 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services</title>
-    <link rel="stylesheet" href="services.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="services.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header class="header">
+      <div class="header-container">
+        <a href="index.html" class="logo"> Travel the Skies </a>
 
-        <div class="header-container">
+        <nav class="navbar" aria-label="Main navigation">
+          <input type="checkbox" id="menu-toggle" />
 
-            <a href="index.html" class="logo">
-                Travel the Skies
-            </a>
+          <label
+            for="menu-toggle"
+            class="menu-icon"
+            aria-label="Toggle navigation"
+          >
+            &#9776;
+          </label>
 
-            <nav class="navbar" aria-label="Main navigation">
-                <input type="checkbox" id="menu-toggle">
-
-                <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
-                    &#9776;
-                </label>
-
-                <ul class="nav-links">
-                    <li><a href="index.html" aria-current="page">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="Services.html">Services</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-        </div>
+          <ul class="nav-links">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
+      <!-- Hero Section -->
 
-        <!-- Hero Section -->
+      <section class="hero">
+        <h1>Services</h1>
+        <p>
+          Explore Our Exceptional Travel Services and Turn Your Dream Vacation
+          Into Reality
+        </p>
+      </section>
 
-        <section class="hero">
-            <h1>Services</h1>
-            <p> Explore Our Exceptional Travel Services and Turn Your Dream Vacation Into Reality
+      <a href="#page-top" class="back-to-top" aria-label="Back to top">
+        <span aria-hidden="true">&uarr;</span>
+      </a>
+      <!-- Services Section -->
 
-            </p>
-        </section>
+      <section class="services">
+        <div class="service_card">
+          <img src="images/Services_CityTravel_image.jfif" alt="City Travel" />
+          <h2>City</h2>
+          <p>
+            Explore vibrant cities, discover iconic landmarks, and experience
+            new cultures. Your next urban adventure awaits!
+          </p>
+        </div>
+        <div class="service_card">
+          <img
+            src="images/Services_MountainTravel_image.jfif"
+            alt="Mountain Travel"
+          />
+          <h2>Mountain</h2>
+          <p>
+            Escape into nature, enjoy breathtaking mountain views, and explore
+            beautiful hiking trails. Adventure starts here!
+          </p>
+        </div>
+        <div class="service_card">
+          <img
+            src="images/Services_OceanTravel_image.jfif"
+            alt="Ocean Travel"
+          />
+          <h2>Ocean</h2>
+          <p>
+            Relax on stunning beaches, swim in crystal-clear waters, and
+            discover tropical destinations. Your perfect getaway awaits!
+          </p>
+        </div>
+        <div class="service_card">
+          <img
+            src="images/Services_WinterTravel_image.jfif"
+            alt="Winter Travel"
+          />
+          <h2>Winter</h2>
+          <p>
+            Experience snowy landscapes, cozy mountain cabins, and exciting
+            winter activities. Make unforgettable winter memories!
+          </p>
+        </div>
+      </section>
 
-        <!-- Services Section -->
+      <!-- Call to Action Section -->
 
-        <section class="services">
-            <div class="service_card">
-                <img src="images/Services_CityTravel_image.jfif" alt="City Travel">
-                <h2>City</h2>
-                <p>Explore vibrant cities, discover iconic landmarks, and experience new cultures. Your next urban
-                    adventure awaits!</p>
-            </div>
-            <div class="service_card">
-                <img src="images/Services_MountainTravel_image.jfif" alt="Mountain Travel">
-                <h2>Mountain</h2>
-                <p>Escape into nature, enjoy breathtaking mountain views, and explore beautiful hiking trails. Adventure
-                    starts here!</p>
-            </div>
-            <div class="service_card">
-                <img src="images/Services_OceanTravel_image.jfif" alt="Ocean Travel">
-                <h2>Ocean</h2>
-                <p>Relax on stunning beaches, swim in crystal-clear waters, and discover tropical destinations. Your
-                    perfect getaway awaits!</p>
-            </div>
-            <div class="service_card">
-                <img src="images/Services_WinterTravel_image.jfif" alt="Winter Travel">
-                <h2>Winter</h2>
-                <p>Experience snowy landscapes, cozy mountain cabins, and exciting winter activities. Make unforgettable
-                    winter memories!</p>
-            </div>
-
-        </section>
-
-        <!-- Call to Action Section -->
-       
-        <section class="button_section">
-            <p>If you're looking for unforgettable experiences and the chance to create lasting memories, your next
-                adventure is just one click away. Contact us today and let us help you plan your dream journey!</p>
-            <button class="button_Contact_Us" onclick="window.location.href='Contact.html'">Contact Us</button>
-        </section>
-
-
+      <section class="button_section">
+        <p>
+          If you're looking for unforgettable experiences and the chance to
+          create lasting memories, your next adventure is just one click away.
+          Contact us today and let us help you plan your dream journey!
+        </p>
+        <button
+          class="button_Contact_Us"
+          onclick="window.location.href = 'Contact.html'"
+        >
+          Contact Us
+        </button>
+      </section>
     </main>
 
     <!-- Footer Section -->
 
     <footer class="footer">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
 
-        <nav class="footer-nav" aria-label="Footer navigation">
-            <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
-        <p>Copyright &copy; 2026 Tahlia, Aspa & Betim</p>
-
+      <p>Copyright &copy; 2026 Tahlia, Aspa & Betim</p>
     </footer>
-
-
-
-
-</body>
-
+  </body>
 </html>

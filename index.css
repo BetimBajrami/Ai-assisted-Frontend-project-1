@@ -4,6 +4,7 @@
     justify-content: space-between;
     gap: var(--space-xl);
     padding: 65px 0 80px;
+    background-color: var(--color-dark);
 }
 
 .hero-content {

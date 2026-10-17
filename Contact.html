@@ -24,29 +24,28 @@
 
     <!-- Same navigation, order, and branding as the current home page. -->
     <header class="header">
+      <div class="header-container">
+        <a href="index.html" class="logo"> Travel the Skies </a>
 
-        <div class="header-container">
+        <nav class="navbar" aria-label="Main navigation">
+          <input type="checkbox" id="menu-toggle" />
 
-            <a href="index.html" class="logo">
-                Travel the Skies
-            </a>
+          <label
+            for="menu-toggle"
+            class="menu-icon"
+            aria-label="Toggle navigation"
+          >
+            &#9776;
+          </label>
 
-            <nav class="navbar" aria-label="Main navigation">
-                <input type="checkbox" id="menu-toggle">
-
-                <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
-                    &#9776;
-                </label>
-
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="Services.html">Services</a></li>
-                    <li><a href="Contact.html" aria-current="page">Contact</a></li>
-                </ul>
-            </nav>
-
-        </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main id="main-content" class="contact-page" tabindex="-1">
@@ -84,18 +83,14 @@
         </div>
       </section>
 
+      <a href="#page-top" class="back-to-top" aria-label="Back to top">
+        <span aria-hidden="true">&uarr;</span>
+      </a>
+
       <section
         class="section contact-message-section"
         aria-labelledby="message-heading"
       >
-        <a
-          href="#page-top"
-          class="contact-back-to-top"
-          aria-label="Back to top"
-        >
-          <span aria-hidden="true">&uarr;</span>
-        </a>
-
         <div class="container contact-layout">
           <div class="contact-panel contact-form-panel">
             <p class="contact-eyebrow">WHERE WOULD YOU LIKE TO GO?</p>
@@ -243,18 +238,16 @@
 
     <!-- Same footer as the current home page; Contact is the active link. -->
     <footer class="footer">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
 
-        <nav class="footer-nav" aria-label="Footer navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="Contact.html" aria-current="page">Contact</a></li>
-            </ul>
-        </nav>
-
-        <p>Copyright &copy; 2026 Tahlia, Aspa & Betim</p>
-
+      <p>Copyright &copy; 2026 Tahlia, Aspa & Betim</p>
     </footer>
   </body>
 </html>
