@@ -73,14 +73,15 @@
     margin-left: auto;
     margin-right: auto;
     gap: 50px;
-    padding: 100px;
-    margin-bottom: 50px;
+    padding: 0 100px;
+    margin-bottom: 150px;
     max-width: 1200px;
     max-height: 200px;
     border-radius: 1%;
     color: var(--color-dark);
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-logo);
+    text-align: justify;
 }
 
 .button_Contact_Us{
@@ -98,7 +99,7 @@
 
 .button_Contact_Us:hover {
     background-color: var(--color-accent-hover);
-     transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
@@ -114,7 +115,7 @@
     }
     .hero{
         align-self: center;
-        max-width: 100%;
+        max-width: 70%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -134,7 +135,7 @@
     }
 
     .service_card{
-        width: 100%;
+        width: 80%;
         flex-shrink: 1;
     }
 
@@ -145,7 +146,7 @@
         font-size: var(--font-size-body);
         height: 100%;
         width: 100%;
-        padding: 0px 20px;
+        padding: 0px 30px;
     }
 
 
