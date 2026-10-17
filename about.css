@@ -1,124 +1,141 @@
-/* Page-specific layout. Navigation and footer styles come from style.css. */
+/* ========================================
+   ABOUT PAGE: SHARED PAGE LAYOUT
+======================================== */
+
 .about-page {
-    background-color: var(--color-light);
+  background-color: var(--color-muted);
 }
 
+/* Centered page heading */
+.about-page-header {
+  padding: clamp(2rem, 4vw, 3.25rem) var(--page-padding) 0.5rem;
+  background-color: var(--color-light);
+  text-align: center;
+}
+
+.about-page-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: var(--font-weight-extra-bold);
+  line-height: 1.15;
+}
+
+/* ========================================
+   ABOUT PAGE: CONTENT SECTIONS
+======================================== */
+
+/* Background separation */
+.about-intro {
+  background-color: var(--color-light);
+}
+
+.about-founder {
+  background-color: var(--color-muted);
+}
+
+/* Consistent spacing */
 .about-intro,
 .about-founder {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-lg);
-    width: 100%;
-    max-width: var(--container-max-width);
-    margin-inline: auto;
-    padding: clamp(2rem, 5vw, 4.5rem) var(--page-padding);
+  padding-block: clamp(2rem, 4vw, 4rem);
 }
 
-#about-heading {
-    margin: 0;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: var(--font-weight-extra-bold);
-    line-height: 1.1;
-}
-
-.about-intro-content,
-.about-intro-column,
-.about-founder-image,
-.about-founder-bio {
-    min-width: 0;
-}
-
-.about-intro-lead {
-    margin: 0 0 var(--space-md);
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
-    font-weight: var(--font-weight-bold);
-    line-height: 1.4;
-}
-
-.about-intro-columns {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-}
-.about-intro-column {
-    text-align: justify;
-}
-
-.about-intro-column p,
-.about-founder-bio p {
-    color: var(--color-text-muted);
-}
-
-.about-intro-column p:last-child,
-.about-founder-bio p:last-child {
-    margin-bottom: 0;
-}
-
-.about-banner {
-    width: 100%;
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding-inline: var(--page-padding);
-}
-
-.about-banner img {
-    width: 100%;
-    height: auto;
-    border-radius: 1%;
-}
-
+/* Space for the arrow already exists between sections */
 .about-founder {
-    align-items: stretch;
+  padding-top: clamp(1rem, 3vw, 2rem);
 }
 
-.about-founder-image img {
-    width: 100%;
-    max-width: 26rem;
-    height: auto;
-    margin-inline: auto;
-    border-radius: 0.5rem;
+/* ========================================
+   FLEXBOX: MOBILE FIRST
+======================================== */
+
+.about-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-lg);
 }
 
-.about-founder-bio h2 {
-    margin: 0 0 var(--space-md);
-    font-size: var(--font-size-heading);
-    line-height: 1.2;
+/* Flexible text and image containers */
+.about-copy,
+.about-picture {
+  min-width: 0;
 }
 
-@media (min-width: 700px) {
-    .about-intro-columns {
-        flex-direction: row;
-        gap: var(--space-lg);
-    }
-
-    .about-intro-column {
-        flex: 1 1 0;
-    }
+/* Text content */
+.about-copy h2 {
+  margin: 0 0 var(--space-md);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-extra-bold);
+  line-height: 1.2;
 }
+
+.about-copy p {
+  margin: 0 0 var(--space-md);
+  color: var(--color-text-muted);
+  text-align: left;
+  line-height: 1.6;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   ABOUT PAGE: IMAGES
+======================================== */
+
+.about-picture {
+  width: 100%;
+  margin: 0;
+}
+
+.about-picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+/* ========================================
+   DESKTOP: ALTERNATING FLEXBOX LAYOUT
+======================================== */
 
 @media (min-width: 900px) {
-    .about-intro {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: var(--space-xl);
-    }
+  .about-section-content {
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4rem);
+  }
 
-    #about-heading {
-        flex: 1 1 0;
-    }
+  /* Equal available width for text and image */
+  .about-copy,
+  .about-picture {
+    flex: 1 1 0;
+    min-width: 0;
+  }
 
-    .about-intro-content {
-        flex: 2 1 0;
-    }
+  .about-picture {
+    width: auto;
+  }
 
-    .about-founder {
-        flex-direction: row;
-        align-items: center;
-        gap: var(--space-xl);
-    }
+  /* Consistent image proportions without stretching */
+  .about-picture img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+  }
+}
 
-    .about-founder-image,
-    .about-founder-bio {
-        flex: 1 1 0;
-    }
+/* ========================================
+   SMALL MOBILE ADJUSTMENTS
+======================================== */
+
+@media (max-width: 480px) {
+  .about-section-content {
+    gap: var(--space-md);
+  }
+
+  .about-copy h2 {
+    font-size: 1.5rem;
+  }
 }
